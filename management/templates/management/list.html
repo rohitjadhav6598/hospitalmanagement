@@ -1,0 +1,16 @@
+{% extends "management/base.html" %}
+{% block content %}
+	{% for p in patients %}
+		<article class="media content-section">
+		  <div class="media-body">
+		    <h2><a class="article-title" href="#">{{ p.name }}</a></h2>
+		    <p class="article-content">Age: {{ p.age }}  Admission Date: {{ p.doa }}  Bed: {{ p.type }}
+		    Address: {{ p.address }}</p>
+			    <div class='buttons'>
+			    <p> <button>Add Medicine</button> <button>Add Diagnostics</button></p>
+			    <p> <button>Update</button> <button>Delete</button></p>
+				</div>
+		  </div>
+		</article>
+	{% endfor %}
+{% endblock content %}
